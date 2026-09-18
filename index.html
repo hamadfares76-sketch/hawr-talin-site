@@ -2,14 +2,13 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>حور وتالين بيج - أزياء نسائية راقية</title>
   <meta name="description" content="محل حور وتالين بيج - عبايات سوداء، فساتين سواريه، جيبات، درستات. الأقصر، شارع السوق.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ===== الألوان الأساسية ===== */
     :root {
       --brown-dark: #4a3728;
       --brown: #6b4f3a;
@@ -27,24 +26,23 @@
       --shadow-strong: rgba(74, 55, 40, 0.15);
     }
 
-    /* ===== ريسيت أساسي ===== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
     body {
       font-family: 'Cairo', sans-serif;
       background: var(--cream);
       color: var(--text-dark);
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
+      font-size: 16px;
     }
-    h1, h2, h3, h4 { font-family: 'Amiri', serif; font-weight: 700; color: var(--brown-dark); }
+    h1, h2, h3, h4 { font-family: 'Amiri', serif; font-weight: 700; color: var(--brown-dark); line-height: 1.3; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; display: block; }
     ul { list-style: none; }
     button { cursor: pointer; border: none; font-family: inherit; font-size: 1rem; }
-    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
-    /* ===== الهيدر ===== */
     header {
       background: var(--white);
       box-shadow: 0 2px 20px var(--shadow);
@@ -55,54 +53,55 @@
     .header-top {
       background: var(--brown-dark);
       color: var(--beige-light);
-      padding: 8px 0;
-      font-size: 0.85rem;
+      padding: 6px 0;
+      font-size: 0.75rem;
     }
-    .header-top .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
-    .header-top span { display: flex; align-items: center; gap: 6px; }
-    .header-top i { color: var(--gold); }
+    .header-top .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .header-top span { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .header-top i { color: var(--gold); font-size: 0.85rem; }
 
-    .header-main { padding: 15px 0; }
-    .header-main .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-    .logo { display: flex; align-items: center; gap: 12px; }
-    .logo img { height: 70px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px var(--shadow); }
-    .logo-text h1 { font-size: 1.6rem; color: var(--brown-dark); line-height: 1.2; }
-    .logo-text p { font-size: 0.85rem; color: var(--text-light); font-family: 'Cairo', sans-serif; }
+    .header-main { padding: 12px 0; }
+    .header-main .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .logo img { height: 55px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px var(--shadow); }
+    .logo-text h1 { font-size: 1.25rem; color: var(--brown-dark); line-height: 1.2; }
+    .logo-text p { font-size: 0.7rem; color: var(--text-light); font-family: 'Cairo', sans-serif; }
 
-    .header-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .header-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
     .btn-whatsapp {
       background: #25d366;
       color: var(--white);
-      padding: 12px 24px;
+      padding: 10px 16px;
       border-radius: 50px;
       font-weight: 600;
-      display: flex; align-items: center; gap: 8px;
+      display: flex; align-items: center; gap: 6px;
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      font-size: 0.85rem;
+      white-space: nowrap;
     }
     .btn-whatsapp:hover { background: #1ebd5a; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
-    .btn-whatsapp i { font-size: 1.2rem; }
+    .btn-whatsapp i { font-size: 1rem; }
 
-    .mobile-menu-btn { display: none; background: var(--brown); color: var(--white); padding: 10px 15px; border-radius: 8px; font-size: 1.2rem; }
+    .mobile-menu-btn { display: none; background: var(--brown); color: var(--white); padding: 8px 12px; border-radius: 8px; font-size: 1.1rem; }
 
-    nav ul { display: flex; gap: 5px; flex-wrap: wrap; justify-content: center; }
+    nav ul { display: flex; gap: 3px; flex-wrap: wrap; justify-content: center; }
     nav a {
-      display: block; padding: 10px 18px; border-radius: 8px;
+      display: block; padding: 8px 14px; border-radius: 8px;
       color: var(--text-medium); font-weight: 500; transition: all 0.3s;
-      position: relative;
+      position: relative; font-size: 0.9rem;
     }
     nav a::after {
-      content: ''; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
+      content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
       width: 0; height: 2px; background: var(--gold); transition: width 0.3s;
     }
     nav a:hover, nav a.active { color: var(--brown-dark); background: var(--beige-light); }
     nav a:hover::after, nav a.active::after { width: 70%; }
 
-    /* ===== الهيرو ===== */
     .hero {
       background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 100%);
       color: var(--beige-light);
-      padding: 80px 0; position: relative; overflow: hidden;
+      padding: 60px 0; position: relative; overflow: hidden;
     }
     .hero::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -110,143 +109,155 @@
       opacity: 0.5;
     }
     .hero .container { position: relative; z-index: 1; text-align: center; }
-    .hero-badge { display: inline-block; background: var(--gold); color: var(--brown-dark); padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 20px; }
-    .hero h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 15px; line-height: 1.3; color: var(--beige-light); }
-    .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; color: var(--beige); font-weight: 300; }
-    .hero-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 30px; border-radius: 50px; font-weight: 600; transition: all 0.3s; }
+    .hero-badge { display: inline-block; background: var(--gold); color: var(--brown-dark); padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-bottom: 16px; }
+    .hero h2 { font-size: clamp(1.7rem, 6vw, 2.8rem); margin-bottom: 12px; line-height: 1.3; color: var(--beige-light); }
+    .hero p { font-size: clamp(0.95rem, 3vw, 1.1rem); max-width: 500px; margin: 0 auto 24px; color: var(--beige); font-weight: 300; }
+    .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 50px; font-weight: 600; transition: all 0.3s; font-size: 0.9rem; }
     .btn-primary { background: var(--gold); color: var(--brown-dark); }
-    .btn-primary:hover { background: #e8c07a; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(201, 168, 106, 0.4); }
+    .btn-primary:hover { background: #e8c07a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201, 168, 106, 0.4); }
     .btn-outline { background: transparent; color: var(--beige-light); border: 2px solid var(--gold); }
     .btn-outline:hover { background: var(--gold); color: var(--brown-dark); }
 
-    /* ===== الأقسام المشتركة ===== */
-    .section { padding: 70px 0; }
-    .section-title { text-align: center; margin-bottom: 50px; }
-    .section-title h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); position: relative; display: inline-block; padding-bottom: 15px; }
+    .section { padding: 50px 0; }
+    .section-title { text-align: center; margin-bottom: 35px; }
+    .section-title h2 { font-size: clamp(1.5rem, 5vw, 2.2rem); position: relative; display: inline-block; padding-bottom: 12px; }
     .section-title h2::after {
       content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-      width: 80px; height: 3px; background: var(--gold); border-radius: 2px;
+      width: 60px; height: 3px; background: var(--gold); border-radius: 2px;
     }
-    .section-title p { color: var(--text-light); margin-top: 10px; font-size: 1.05rem; }
+    .section-title p { color: var(--text-light); margin-top: 8px; font-size: 0.95rem; }
 
     .bg-beige { background: var(--beige-light); }
     .bg-white { background: var(--white); }
 
-    /* ===== من نحن ===== */
-    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
     .about-card {
-      background: var(--white); padding: 35px 25px; border-radius: 16px;
-      text-align: center; box-shadow: 0 5px 25px var(--shadow); transition: all 0.3s;
+      background: var(--white); padding: 28px 20px; border-radius: 14px;
+      text-align: center; box-shadow: 0 4px 20px var(--shadow); transition: all 0.3s;
       border: 1px solid var(--beige);
     }
-    .about-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px var(--shadow-strong); }
-    .about-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--beige), var(--beige-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.8rem; color: var(--brown); }
-    .about-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
-    .about-card p { color: var(--text-medium); font-size: 0.95rem; }
+    .about-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px var(--shadow-strong); }
+    .about-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--beige), var(--beige-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.5rem; color: var(--brown); }
+    .about-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+    .about-card p { color: var(--text-medium); font-size: 0.9rem; line-height: 1.6; }
 
-    /* ===== المنتجات ===== */
-    .filter-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+    .filter-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
     .filter-btn {
-      background: var(--white); color: var(--text-medium); padding: 10px 24px; border-radius: 50px;
-      font-weight: 500; border: 2px solid var(--beige); transition: all 0.3s;
+      background: var(--white); color: var(--text-medium); padding: 8px 18px; border-radius: 50px;
+      font-weight: 500; border: 2px solid var(--beige); transition: all 0.3s; font-size: 0.85rem;
     }
     .filter-btn:hover, .filter-btn.active { background: var(--brown-dark); color: var(--beige-light); border-color: var(--brown-dark); }
-    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; }
+
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
     .product-card {
-      background: var(--white); border-radius: 16px; overflow: hidden;
-      box-shadow: 0 5px 20px var(--shadow); transition: all 0.4s;
-      border: 1px solid var(--beige);
+      background: var(--white); border-radius: 14px; overflow: hidden;
+      box-shadow: 0 4px 15px var(--shadow); transition: all 0.4s;
+      border: 1px solid var(--beige); display: flex; flex-direction: column;
     }
-    .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px var(--shadow-strong); }
-    .product-img { position: relative; overflow: hidden; aspect-ratio: 3/4; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 15px 30px var(--shadow-strong); }
+    .product-img { position: relative; overflow: hidden; aspect-ratio: 3/4; background: var(--beige-light); }
     .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .product-card:hover .product-img img { transform: scale(1.08); }
-    .product-badge { position: absolute; top: 12px; left: 12px; background: var(--gold); color: var(--brown-dark); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
-    .product-info { padding: 20px; }
-    .product-category { font-size: 0.8rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-    .product-title { font-size: 1.1rem; margin-bottom: 8px; color: var(--brown-dark); }
-    .product-price { color: var(--brown); font-weight: 700; font-size: 1.1rem; margin-bottom: 15px; }
-    .btn-order { width: 100%; background: var(--brown-dark); color: var(--beige-light); padding: 12px; border-radius: 10px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s; }
+    .product-card:hover .product-img img { transform: scale(1.05); }
+    .product-badge { position: absolute; top: 8px; left: 8px; background: var(--gold); color: var(--brown-dark); padding: 3px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+    .product-info { padding: 14px; display: flex; flex-direction: column; flex: 1; }
+    .product-category { font-size: 0.7rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .product-title { font-size: 0.95rem; margin-bottom: 6px; color: var(--brown-dark); line-height: 1.3; }
+    .product-price { color: var(--brown); font-weight: 700; font-size: 1rem; margin-bottom: 12px; }
+    .btn-order { width: 100%; background: var(--brown-dark); color: var(--beige-light); padding: 10px; border-radius: 8px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.3s; font-size: 0.85rem; margin-top: auto; }
     .btn-order:hover { background: var(--brown); }
 
-    /* ===== معرض الصور ===== */
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
-    .gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 1; cursor: pointer; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+    .gallery-item { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 1; cursor: pointer; }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .gallery-item:hover img { transform: scale(1.1); }
-    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(74,55,40,0.9) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
+    .gallery-item:hover img { transform: scale(1.08); }
+    .gallery-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(74,55,40,0.9) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 12px; }
     .gallery-item:hover .gallery-overlay { opacity: 1; }
-    .gallery-overlay span { color: var(--white); font-weight: 500; }
+    .gallery-overlay span { color: var(--white); font-weight: 500; font-size: 0.75rem; }
 
-    /* ===== المودال (تكبير الصورة) ===== */
-    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; align-items: center; justify-content: center; padding: 20px; }
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; align-items: center; justify-content: center; padding: 16px; }
     .modal.active { display: flex; }
-    .modal-img { max-width: 90vw; max-height: 85vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); animation: zoomIn 0.3s ease; }
+    .modal-img { max-width: 95vw; max-height: 85vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); animation: zoomIn 0.3s ease; }
     @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-    .modal-close { position: absolute; top: 20px; right: 20px; width: 50px; height: 50px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brown-dark); box-shadow: 0 5px 20px var(--shadow); transition: all 0.3s; }
+    .modal-close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--brown-dark); box-shadow: 0 5px 20px var(--shadow); transition: all 0.3s; }
     .modal-close:hover { background: var(--brown-dark); color: var(--white); transform: rotate(90deg); }
-    .modal-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 60px; height: 60px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brown-dark); box-shadow: 0 5px 20px var(--shadow); transition: all 0.3s; opacity: 0.7; }
+    .modal-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--brown-dark); box-shadow: 0 5px 20px var(--shadow); transition: all 0.3s; opacity: 0.7; }
     .modal-nav:hover { opacity: 1; background: var(--brown-dark); color: var(--white); }
-    .modal-prev { left: 20px; } .modal-next { right: 20px; }
+    .modal-prev { left: 12px; } .modal-next { right: 12px; }
 
-    /* ===== الميزات ===== */
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-    .feature-item { display: flex; gap: 15px; padding: 20px; background: var(--white); border-radius: 12px; box-shadow: 0 3px 15px var(--shadow); border: 1px solid var(--beige); transition: all 0.3s; }
-    .feature-item:hover { transform: translateX(-5px); box-shadow: 0 8px 25px var(--shadow-strong); }
-    .feature-icon { width: 55px; height: 55px; background: linear-gradient(135deg, var(--brown), var(--brown-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.4rem; flex-shrink: 0; }
-    .feature-text h4 { margin-bottom: 5px; font-size: 1.05rem; }
-    .feature-text p { font-size: 0.9rem; color: var(--text-light); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .feature-item { display: flex; gap: 12px; padding: 18px; background: var(--white); border-radius: 12px; box-shadow: 0 3px 15px var(--shadow); border: 1px solid var(--beige); transition: all 0.3s; }
+    .feature-item:hover { transform: translateX(-4px); box-shadow: 0 8px 25px var(--shadow-strong); }
+    .feature-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--brown), var(--brown-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.2rem; flex-shrink: 0; }
+    .feature-text h4 { margin-bottom: 4px; font-size: 0.95rem; }
+    .feature-text p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; }
 
-    /* ===== الفوتر ===== */
-    footer { background: var(--brown-dark); color: var(--beige-light); padding: 60px 0 20px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-    .footer-col h3 { color: var(--gold); font-size: 1.3rem; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
-    .footer-col h3::after { content: ''; position: absolute; bottom: 0; right: 0; width: 50px; height: 2px; background: var(--gold); }
-    .footer-col p, .footer-col li { color: var(--beige); margin-bottom: 10px; line-height: 1.8; }
+    footer { background: var(--brown-dark); color: var(--beige-light); padding: 40px 0 16px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; }
+    .footer-col h3 { color: var(--gold); font-size: 1.15rem; margin-bottom: 16px; position: relative; padding-bottom: 8px; }
+    .footer-col h3::after { content: ''; position: absolute; bottom: 0; right: 0; width: 40px; height: 2px; background: var(--gold); }
+    .footer-col p, .footer-col li { color: var(--beige); margin-bottom: 8px; line-height: 1.7; font-size: 0.9rem; }
     .footer-col a:hover { color: var(--gold); }
-    .footer-col .contact-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 15px; }
-    .footer-col .contact-icon { width: 40px; height: 40px; background: var(--brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0; }
-    .social-links { display: flex; gap: 12px; margin-top: 20px; }
-    .social-links a { width: 44px; height: 44px; background: var(--brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--beige-light); transition: all 0.3s; }
-    .social-links a:hover { background: var(--gold); color: var(--brown-dark); transform: translateY(-3px); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+    .footer-col .contact-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+    .footer-col .contact-icon { width: 36px; height: 36px; background: var(--brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0; font-size: 0.9rem; }
+    .social-links { display: flex; gap: 10px; margin-top: 16px; }
+    .social-links a { width: 40px; height: 40px; background: var(--brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--beige-light); transition: all 0.3s; }
+    .social-links a:hover { background: var(--gold); color: var(--brown-dark); transform: translateY(-2px); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; text-align: center; color: var(--text-light); font-size: 0.8rem; }
 
-    /* ===== زر الواتساب العائم ===== */
-    .whatsapp-float { position: fixed; bottom: 25px; left: 25px; z-index: 999; animation: pulse 2s infinite; }
+    .whatsapp-float { position: fixed; bottom: 20px; left: 20px; z-index: 999; animation: pulse 2s infinite; }
     @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } }
-    .whatsapp-float a { width: 65px; height: 65px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.8rem; box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4); transition: all 0.3s; }
+    .whatsapp-float a { width: 55px; height: 55px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.5rem; box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4); transition: all 0.3s; }
     .whatsapp-float a:hover { transform: scale(1.1) rotate(5deg); }
 
-    /* ===== التجاوب ===== */
     @media (max-width: 768px) {
-      .header-top .container { justify-content: center; text-align: center; }
+      .header-top .container { justify-content: center; text-align: center; gap: 6px; }
+      .header-top span { font-size: 0.7rem; }
       .mobile-menu-btn { display: block; }
       nav { display: none; width: 100%; order: 3; }
       nav.active { display: block; animation: slideDown 0.3s; }
       @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-      nav ul { flex-direction: column; padding: 10px 0; }
-      nav a { text-align: center; border-radius: 0; }
-      .hero { padding: 60px 0; }
-      .section { padding: 50px 0; }
-      .whatsapp-float { bottom: 15px; left: 15px; }
-      .whatsapp-float a { width: 55px; height: 55px; font-size: 1.5rem; }
-      .modal-nav { width: 45px; height: 45px; font-size: 1.2rem; }
-      .modal-prev { left: 10px; } .modal-next { right: 10px; }
-      .modal-close { top: 10px; right: 10px; width: 40px; height: 40px; font-size: 1.2rem; }
+      nav ul { flex-direction: column; padding: 8px 0; }
+      nav a { text-align: center; border-radius: 0; padding: 10px; font-size: 0.95rem; }
+      .hero { padding: 45px 0; }
+      .section { padding: 35px 0; }
+      .whatsapp-float { bottom: 12px; left: 12px; }
+      .whatsapp-float a { width: 48px; height: 48px; font-size: 1.3rem; }
+      .modal-nav { width: 40px; height: 40px; font-size: 1.1rem; }
+      .modal-prev { left: 8px; } .modal-next { right: 8px; }
+      .modal-close { top: 8px; right: 8px; width: 36px; height: 36px; font-size: 1.1rem; }
+      .products-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .feature-item { flex-direction: column; text-align: center; align-items: center; }
+      .feature-icon { margin: 0 auto; }
     }
     @media (max-width: 480px) {
-      .logo img { height: 55px; }
-      .logo-text h1 { font-size: 1.3rem; }
-      .btn { padding: 12px 20px; font-size: 0.9rem; }
+      .container { padding: 0 12px; }
+      .logo img { height: 45px; }
+      .logo-text h1 { font-size: 1.1rem; }
+      .logo-text p { font-size: 0.65rem; }
+      .btn { padding: 10px 18px; font-size: 0.85rem; }
+      .btn-whatsapp { padding: 8px 12px; font-size: 0.8rem; }
+      .btn-whatsapp span { display: none; }
+      .btn-whatsapp i { font-size: 1.1rem; }
+      .product-info { padding: 12px; }
+      .product-title { font-size: 0.85rem; }
+      .product-price { font-size: 0.9rem; }
+      .btn-order { padding: 8px; font-size: 0.8rem; }
+      .filter-btn { padding: 6px 14px; font-size: 0.8rem; }
+      .section-title h2 { font-size: clamp(1.3rem, 6vw, 1.8rem); }
+    }
+    @media (max-width: 360px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
-  <!-- Font Awesome للأيقونات -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<!-- ===== الهيدر ===== -->
 <header>
   <div class="header-top">
     <div class="container">
@@ -275,14 +286,13 @@
       </nav>
       <div class="header-actions">
         <a href="https://wa.me/201002065096?text=أهلاً%20حور%20وتالين%20بيج،%20عاوزة%20أستفسر%20عن%20المنتجات" target="_blank" class="btn-whatsapp">
-          <i class="fa-brands fa-whatsapp"></i> اطلب الآن
+          <i class="fa-brands fa-whatsapp"></i> <span>اطلب الآن</span>
         </a>
       </div>
     </div>
   </div>
 </header>
 
-<!-- ===== الهيرو ===== -->
 <section id="home" class="hero">
   <div class="container">
     <span class="hero-badge"><i class="fa-solid fa-gem"></i> تشكيلة جديدة وصلت للتو</span>
@@ -295,7 +305,6 @@
   </div>
 </section>
 
-<!-- ===== من نحن ===== -->
 <section id="about" class="section bg-beige">
   <div class="container">
     <div class="section-title">
@@ -327,7 +336,6 @@
   </div>
 </section>
 
-<!-- ===== المنتجات ===== -->
 <section id="products" class="section bg-white">
   <div class="container">
     <div class="section-title">
@@ -343,26 +351,20 @@
       <button class="filter-btn" data-filter="top" role="tab" aria-selected="false">درستات</button>
     </div>
 
-    <div class="products-grid" id="productsGrid">
-      <!-- المنتجات ستُضاف بواسطة الجافاسكريبت -->
-    </div>
+    <div class="products-grid" id="productsGrid"></div>
   </div>
 </section>
 
-<!-- ===== المعرض ===== -->
 <section id="gallery" class="section bg-beige">
   <div class="container">
     <div class="section-title">
       <h2>معرض الصور</h2>
       <p>لقطات من محلنا ومنتجاتنا - اضغطي على أي صورة للتكبير</p>
     </div>
-    <div class="gallery-grid" id="galleryGrid">
-      <!-- الصور ستُضاف بواسطة الجافاسكريبت -->
-    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
   </div>
 </section>
 
-<!-- ===== الميزات + التواصل ===== -->
 <section id="contact" class="section bg-white">
   <div class="container">
     <div class="section-title">
@@ -400,37 +402,35 @@
       </div>
     </div>
 
-    <!-- خريطة ومعلومات التواصل -->
-    <div style="margin-top: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-      <div style="background: var(--beige-light); padding: 30px; border-radius: 16px; border: 1px solid var(--beige);">
-        <h3 style="margin-bottom: 20px; color: var(--brown-dark);"><i class="fa-solid fa-map-location-dot" style="margin-left: 10px; color: var(--gold);"></i> موقعنا على الخريطة</h3>
-        <div style="border-radius: 12px; overflow: hidden; height: 300px;">
+    <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+      <div style="background: var(--beige-light); padding: 24px; border-radius: 14px; border: 1px solid var(--beige);">
+        <h3 style="margin-bottom: 16px; color: var(--brown-dark);"><i class="fa-solid fa-map-location-dot" style="margin-left: 8px; color: var(--gold);"></i> موقعنا على الخريطة</h3>
+        <div style="border-radius: 10px; overflow: hidden; height: 250px;">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3426.123456789!2d32.645!3d25.689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7b2c3d4e5f6a7%3A0x8b9c0d1e2f3a4b5c!2z2KfZhNix2YEg2KfZhtiv2LHZhA!5e0!3m2!1sar!2seg!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <p style="margin-top: 15px; font-size: 0.95rem; color: var(--text-medium);"><strong>العنوان:</strong> الأقصر، شارع السوق، بعد مدرسة الصنايع، بجوار الحمصاني</p>
+        <p style="margin-top: 12px; font-size: 0.9rem; color: var(--text-medium);"><strong>العنوان:</strong> الأقصر، شارع السوق، بعد مدرسة الصنايع، بجوار الحمصاني</p>
       </div>
 
-      <div style="background: var(--brown-dark); color: var(--beige-light); padding: 30px; border-radius: 16px;">
-        <h3 style="margin-bottom: 25px; color: var(--gold);"><i class="fa-solid fa-phone" style="margin-left: 10px;"></i> تواصلي معنا</h3>
-        <div style="margin-bottom: 20px;">
-          <p style="margin-bottom: 10px;"><strong>📞 للطلبات والاستفسارات:</strong></p>
-          <a href="tel:+201002065096" style="font-size: 1.3rem; font-weight: 700; color: var(--gold); display: inline-block; margin-bottom: 15px;">0100 206 5096</a>
+      <div style="background: var(--brown-dark); color: var(--beige-light); padding: 24px; border-radius: 14px;">
+        <h3 style="margin-bottom: 20px; color: var(--gold);"><i class="fa-solid fa-phone" style="margin-left: 8px;"></i> تواصلي معنا</h3>
+        <div style="margin-bottom: 16px;">
+          <p style="margin-bottom: 8px;"><strong>📞 للطلبات والاستفسارات:</strong></p>
+          <a href="tel:+201002065096" style="font-size: 1.2rem; font-weight: 700; color: var(--gold); display: inline-block; margin-bottom: 12px;">0100 206 5096</a>
           <br>
-          <a href="https://wa.me/201002065096?text=أهلاً%20حور%20وتالين%20بيج،%20عاوزة%20أستفسر%20عن%20المنتجات" target="_blank" style="background: #25d366; color: var(--white); padding: 14px 28px; border-radius: 50px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s;">
+          <a href="https://wa.me/201002065096?text=أهلاً%20حور%20وتالين%20بيج،%20عاوزة%20أستفسر%20عن%20المنتجات" target="_blank" style="background: #25d366; color: var(--white); padding: 12px 24px; border-radius: 50px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; font-size: 0.9rem;">
             <i class="fa-brands fa-whatsapp"></i> مراسلة على واتساب
           </a>
         </div>
-        <div style="padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-          <p style="margin-bottom: 8px;"><i class="fa-solid fa-clock" style="margin-left: 10px; color: var(--gold);"></i> <strong>ساعات العمل:</strong> يومياً ٨:٠٠ ص – ١٢:٠٠ م</p>
-          <p style="margin-bottom: 8px;"><i class="fa-solid fa-money-bill-wave" style="margin-left: 10px; color: var(--gold);"></i> <strong>طرق الدفع:</strong> كاش، فودافون كاش، إنستاباي</p>
-          <p><i class="fa-solid fa-truck" style="margin-left: 10px; color: var(--gold);"></i> <strong>التوصيل:</strong> متاح للأقصر والمحافظات</p>
+        <div style="padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <p style="margin-bottom: 6px;"><i class="fa-solid fa-clock" style="margin-left: 8px; color: var(--gold);"></i> <strong>ساعات العمل:</strong> يومياً ٨:٠٠ ص – ١٢:٠٠ م</p>
+          <p style="margin-bottom: 6px;"><i class="fa-solid fa-money-bill-wave" style="margin-left: 8px; color: var(--gold);"></i> <strong>طرق الدفع:</strong> كاش، فودافون كاش، إنستاباي</p>
+          <p><i class="fa-solid fa-truck" style="margin-left: 8px; color: var(--gold);"></i> <strong>التوصيل:</strong> متاح للأقصر والمحافظات</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== الفوتر ===== -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -485,14 +485,12 @@
   </div>
 </footer>
 
-<!-- ===== زر الواتساب العائم ===== -->
 <div class="whatsapp-float">
   <a href="https://wa.me/201002065096?text=أهلاً%20حور%20وتالين%20بيج،%20عاوزة%20أستفسر%20عن%20المنتجات" target="_blank" aria-label="تواصل واتساب">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 </div>
 
-<!-- ===== مودال تكبير الصور ===== -->
 <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="تكبير الصورة">
   <button class="modal-close" onclick="closeModal()" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
   <button class="modal-nav modal-prev" onclick="prevImage()" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
@@ -501,29 +499,21 @@
 </div>
 
 <script>
-  // ===== بيانات المنتجات =====
   const products = [
-    // عبايات سوداء
     { id: 1, category: 'abaya', title: 'عباية سوداء كلاسيك', price: '350 - 550 ج.م', badge: 'الأكثر مبيعاً', img: 'images/468214441_122111439902595994_2110781040546561837_n.jpg' },
     { id: 2, category: 'abaya', title: 'عباية سوداء مطرزة', price: '450 - 650 ج.م', badge: 'جديد', img: 'images/468297955_122111441732595994_2612993007043408091_n.jpg' },
     { id: 3, category: 'abaya', title: 'عباية سوداء واسعة', price: '300 - 480 ج.م', badge: '', img: 'images/468780987_122113156736595994_1389929527942310032_n.jpg' },
     { id: 4, category: 'abaya', title: 'عباية سوداء بكاب', price: '400 - 600 ج.م', badge: 'مميز', img: 'images/469020943_122113034714595994_6942162377092334302_n.jpg' },
     { id: 5, category: 'abaya', title: 'عباية سوداء فاخرة', price: '500 - 750 ج.م', badge: 'فاخر', img: 'images/469177878_122113034774595994_5416524942042520060_n.jpg' },
-
-    // فساتين سواريه
     { id: 6, category: 'dress', title: 'فستان سواريه ذهبي', price: '600 - 900 ج.م', badge: 'جديد', img: 'images/469471780_122113610510595994_8269285882038567968_n.jpg' },
     { id: 7, category: 'dress', title: 'فستان سواريه أزرق ملكي', price: '550 - 850 ج.م', badge: 'مناسب للمناسبات', img: 'images/470151528_122115216332595994_6241840592398215704_n.jpg' },
     { id: 8, category: 'dress', title: 'فستان سواريه أحمر', price: '500 - 800 ج.م', badge: 'ساحر', img: 'images/470177829_122115224912595994_2104599150485106628_n.jpg' },
     { id: 9, category: 'dress', title: 'فستان سواريه أسود', price: '450 - 700 ج.م', badge: 'كلاسيك', img: 'images/470186995_122114992166595994_6518976716448302705_n.jpg' },
     { id: 10, category: 'dress', title: 'فستان سواريه بيج', price: '550 - 850 ج.م', badge: 'أنيق', img: 'images/470189104_122115216308595994_1295397693318211893_n.jpg' },
-
-    // جيبات
     { id: 11, category: 'skirt', title: 'جيبة مخملية سوداء', price: '200 - 350 ج.م', badge: '', img: 'images/470208289_122115580682595994_3169208621557176416_n.jpg' },
     { id: 12, category: 'skirt', title: 'جيبة بليرز كحلي', price: '180 - 300 ج.م', badge: 'كاجوال', img: 'images/470232117_122115359978595994_4944625455304237322_n.jpg' },
     { id: 13, category: 'skirt', title: 'جيبة ساتان بيج', price: '220 - 380 ج.م', badge: 'أنيق', img: 'images/470497228_122115580664595994_486548759137023020_n.jpg' },
     { id: 14, category: 'skirt', title: 'جيبة جينز سوداء', price: '150 - 250 ج.م', badge: 'يومي', img: 'images/470641036_122115817922595994_7142071568997959302_n.jpg' },
-
-    // درستات
     { id: 15, category: 'top', title: 'درستة حرير سوداء', price: '180 - 300 ج.م', badge: 'فاخر', img: 'images/471325410_122117335928595994_3729284000750460155_n.jpg' },
     { id: 16, category: 'top', title: 'درستة قطن أبيض', price: '120 - 200 ج.م', badge: 'أساسي', img: 'images/471701814_122117335244595994_4723635251015288987_n.jpg' },
     { id: 17, category: 'top', title: 'درستة شيفون بيج', price: '200 - 350 ج.م', badge: 'خفيف', img: 'images/471780374_122117335256595994_5578144367058707977_n.jpg' },
@@ -531,7 +521,6 @@
     { id: 19, category: 'top', title: 'درستة مخمل أخضر', price: '300 - 450 ج.م', badge: 'شتوي', img: 'images/474498801_122121639440595994_5342390707950316295_n.jpg' },
   ];
 
-  // صور المعرض (جميع الصور عدا اللوجو)
   const galleryImages = [
     'images/468214441_122111439902595994_2110781040546561837_n.jpg',
     'images/468297955_122111441732595994_2612993007043408091_n.jpg',
@@ -556,7 +545,6 @@
 
   let currentModalIndex = 0;
 
-  // ===== عرض المنتجات =====
   function renderProducts(filter = 'all') {
     const grid = document.getElementById('productsGrid');
     const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
@@ -583,7 +571,6 @@
     return names[cat] || '';
   }
 
-  // ===== فلترة المنتجات =====
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -592,7 +579,6 @@
     });
   });
 
-  // ===== عرض المعرض =====
   function renderGallery() {
     const grid = document.getElementById('galleryGrid');
     grid.innerHTML = galleryImages.map((img, i) => `
@@ -603,7 +589,6 @@
     `).join('');
   }
 
-  // ===== المودال =====
   function openModal(index) {
     currentModalIndex = index;
     document.getElementById('modalImg').src = galleryImages[index];
@@ -623,7 +608,6 @@
     document.getElementById('modalImg').src = galleryImages[currentModalIndex];
   }
 
-  // إغلاق المودال بالضغط خارج الصورة أو Escape
   document.getElementById('imageModal').addEventListener('click', (e) => {
     if (e.target === document.getElementById('imageModal')) closeModal();
   });
@@ -633,7 +617,6 @@
     if (e.key === 'ArrowRight') prevImage();
   });
 
-  // ===== القائمة المحمولة =====
   function toggleMenu() {
     document.getElementById('mainNav').classList.toggle('active');
   }
@@ -641,7 +624,6 @@
     document.getElementById('mainNav').classList.remove('active');
   }
 
-  // ===== تفعيل الرابط النشط عند التمرير =====
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('nav a');
   window.addEventListener('scroll', () => {
@@ -655,11 +637,9 @@
     });
   });
 
-  // ===== تهيئة الصفحة =====
   renderProducts();
   renderGallery();
 
-  // تأثير ظهور سلس للأقسام
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -675,7 +655,6 @@
     sec.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(sec);
   });
-  // الهيرو يظهر فوراً
   document.querySelector('.hero').style.opacity = '1';
   document.querySelector('.hero').style.transform = 'translateY(0)';
 </script>
